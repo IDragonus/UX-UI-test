@@ -1,0 +1,26 @@
+<mat-drawer-container class="example-container" autosize>
+  <mat-drawer #drawer class="sidenav-container" mode="side">
+    <h1>Restaurants</h1>
+  </mat-drawer>
+
+  <div class="layout-container">
+    <mat-toolbar>
+      <button
+        class="hamburger-text"
+        mat-stroked-button
+        color="primary"
+        (click)="drawer.toggle()"
+      >
+        Restaurants
+      </button>
+      <mat-icon
+        class="hamburger-icon"
+        type="button"
+        mat-button
+        (click)="drawer.toggle()"
+      >
+        menu
+      </mat-icon>
+    </mat-toolbar>
+  </div>
+</mat-drawer-container>

@@ -1,0 +1,28 @@
+<main class="login-container">
+  <section class="card">
+    <form>
+      <section class="title">
+        <h1 class="login-title">Login</h1>
+        <mat-icon>lock</mat-icon>
+      </section>
+      <div class="user-icon">
+        <img
+          src="../../../../assets/images/user-img.png"
+          alt="default-profile-img"
+        />
+      </div>
+      <mat-form-field appearance="outline">
+        <mat-label>Username or Email:</mat-label>
+        <input matInput aperance="fill" type="text" />
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Password:</mat-label>
+        <input matInput type="password" />
+      </mat-form-field>
+      <p class="register-message">
+        Don't have an account? <a [routerLink]="'/register'">click here</a>
+      </p>
+      <button type="submit" mat-flat-button color="accent">Log ing</button>
+    </form>
+  </section>
+</main>
