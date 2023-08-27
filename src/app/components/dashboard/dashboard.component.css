@@ -1,0 +1,39 @@
+mat-toolbar {
+  display: flex;
+  opacity: 1;
+  background-color: #d7ad65;
+  padding: 0.25rem 5rem;
+  justify-content: space-between;
+  height: 6rem;
+}
+
+.options-list {
+  display: flex;
+  gap: 1rem;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+  padding: 4px 0.5rem 0;
+  font-size: 1rem;
+  font-weight: bold;
+  border-top-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  border: 2px solid transparent;
+}
+
+a:hover {
+  color: #2e3e5b;
+  background-color: #f9e1c5;
+  border: 2px solid #ddb383;
+}
+
+p {
+  color: #fff;
+  cursor: pointer;
+}
+
+.bordered {
+  border: 2px solid #fff;
+}
