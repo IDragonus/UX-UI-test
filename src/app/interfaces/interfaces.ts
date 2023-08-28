@@ -1,3 +1,4 @@
 export interface NavbarOptions {
-  option: string;
+  label: string;
+  path: string;
 }

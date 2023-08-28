@@ -29,6 +29,7 @@ export class RegisterComponent {
     email: ['', Validators.required],
     password: ['', Validators.required],
   });
+
   constructor(private fb: FormBuilder) {}
 
   onSubmit() {

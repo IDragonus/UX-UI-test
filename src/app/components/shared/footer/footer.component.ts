@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 
 @Component({
   standalone: true,
-  selector: 'ruben-footer',
+  selector: 'app-footer',
   templateUrl: './footer.component.html',
   styleUrls: ['./footer.component.css'],
   imports: [CommonModule],

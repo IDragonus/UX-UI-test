@@ -1,0 +1,21 @@
+<mat-toolbar>
+  <div
+    class="logo"
+    title="WELKHOMEclub | Restaurante, Bar y Espacio de Afterwork y Eventos"
+  >
+    <p [routerLink]="'/index'">WELKHOMEclub</p>
+  </div>
+  <div class="options-list">
+    <a
+      [routerLink]="route.path"
+      *ngFor="let route of navigateOptions"
+      [ngClass]="{
+        bordered: route.label === 'delivery' || route.label === 'reservar'
+      }"
+    >
+      {{ route.label | uppercase }}
+    </a>
+  </div>
+  <!-- <a [routerLink]="['restaurants']">restaurant</a>
+  <a [routerLink]="['drinks']">Drinks</a> -->
+</mat-toolbar>

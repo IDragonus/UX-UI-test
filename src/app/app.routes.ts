@@ -1,5 +1,4 @@
 import { Route } from '@angular/router';
-import { DashboardComponent } from './components/dashboard/dashboard.component';
 
 export const appRoutes: Route[] = [
   {
@@ -9,20 +8,14 @@ export const appRoutes: Route[] = [
   },
   {
     path: 'login',
-    loadComponent: () =>
-      import('./components/auth/login/login.component').then(
-        (m) => m.LoginComponent
-      ),
+    loadChildren: () =>
+      import('./components/auth/auth.routes').then((route) => route.authRoutes),
   },
   {
-    path: 'register',
-    loadComponent: () =>
-      import('./components/auth/register/register.component').then(
-        (m) => m.RegisterComponent
+    path: 'index',
+    loadChildren: () =>
+      import('./components/pages/pages.routes').then(
+        (route) => route.pagesRoutes
       ),
-  },
-  {
-    path: 'welkhomeclub',
-    component: DashboardComponent,
   },
 ];

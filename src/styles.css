@@ -2,7 +2,7 @@ html,
 body {
   height: 100vh;
   background-color: #222;
-  overflow-y: hidden;
+  /* overflow-y: hidden; */
   color: #fff;
 }
 

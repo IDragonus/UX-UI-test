@@ -1,6 +1,6 @@
 <main class="login-container">
   <section class="card">
-    <form>
+    <form [formGroup]="loginForm" (ngSubmit)="login()">
       <section class="title">
         <h1 class="login-title">Login</h1>
         <mat-icon>lock</mat-icon>
@@ -13,20 +13,25 @@
       </div>
       <mat-form-field appearance="outline">
         <mat-label>Username or Email:</mat-label>
-        <input matInput aperance="fill" type="text" />
+        <input
+          matInput
+          aperance="fill"
+          type="text"
+          formControlName="username"
+        />
       </mat-form-field>
       <mat-form-field appearance="outline">
         <mat-label>Password:</mat-label>
-        <input matInput type="password" />
+        <input matInput type="password" formControlName="password" />
       </mat-form-field>
       <p class="register-message">
-        Don't have an account? <a [routerLink]="'/register'">click here</a>
+        Don't have an account? <a [routerLink]="['register']">click here</a>
       </p>
       <button
         type="submit"
         mat-flat-button
         color="accent"
-        [routerLink]="['/welkhomeclub']"
+        [routerLink]="['/index']"
       >
         Loging
       </button>

@@ -9,7 +9,7 @@ mat-toolbar {
 
 .options-list {
   display: flex;
-  gap: 1rem;
+  gap: 0.5rem;
 }
 
 a {
