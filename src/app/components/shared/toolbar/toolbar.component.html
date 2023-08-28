@@ -1,11 +1,26 @@
-<mat-toolbar>
+<mat-toolbar [ngClass]="{ open: openMenu }">
   <div
     class="logo"
     title="WELKHOMEclub | Restaurante, Bar y Espacio de Afterwork y Eventos"
   >
     <p [routerLink]="'/index'">WELKHOMEclub</p>
+
+    <mat-icon [ngClass]="" (click)="openMenu = !openMenu">menu</mat-icon>
   </div>
-  <div class="options-list">
+
+  <ul class="option-list-mobile">
+    <li *ngFor="let route of navigateOptions">
+      <a
+        [routerLink]="route.path"
+        [ngClass]="{
+          bordered: route.label === 'delivery' || route.label === 'reservar'
+        }"
+        >{{ route.label | uppercase }}</a
+      >
+    </li>
+  </ul>
+
+  <div class="options-list-desktop">
     <a
       [routerLink]="route.path"
       *ngFor="let route of navigateOptions"

@@ -5,9 +5,14 @@ mat-toolbar {
   padding: 0.25rem 5rem;
   justify-content: space-between;
   height: 6rem;
+
+  > ul.option-list-mobile,
+  > div.logo > mat-icon {
+    display: none;
+  }
 }
 
-.options-list {
+.options-list-desktop {
   display: flex;
   gap: 0.5rem;
 }
@@ -36,4 +41,52 @@ p {
 
 .bordered {
   border: 2px solid #fff;
+}
+
+mat-toolbar.open {
+  display: flex;
+  height: 20rem;
+  flex-flow: column;
+  transition: height 0.3s ease-in-out;
+  -webkit-transition: height 0.3s ease-in-out;
+  -moz-transition: height 0.3s ease-in-out;
+  -ms-transition: height 0.3s ease-in-out;
+  -o-transition: height 0.3s ease-in-out;
+
+  > ul.option-list-mobile {
+    display: flex;
+  }
+}
+
+@media (max-width: 992px) {
+  div.options-list-desktop {
+    display: none;
+  }
+
+  mat-toolbar {
+    justify-content: center;
+  }
+
+  div.logo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    > mat-icon {
+      color: #fff;
+      display: flex !important;
+    }
+
+    > mat-icon:hover {
+      cursor: pointer;
+    }
+  }
+
+  ul.option-list-mobile {
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-flow: column;
+    margin: 0;
+  }
 }

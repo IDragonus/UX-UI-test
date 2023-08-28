@@ -7,6 +7,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { Router, RouterLink, RouterOutlet } from '@angular/router';
+import { MatMenuModule } from '@angular/material/menu';
 
 @Component({
   standalone: true,
@@ -21,9 +22,12 @@ import { Router, RouterLink, RouterOutlet } from '@angular/router';
     MatIconModule,
     RouterLink,
     NgIf,
+    MatMenuModule,
   ],
 })
 export class ToolbarComponent {
+  openMenu = false;
+
   navigateOptions: NavbarOptions[] = [
     {
       label: 'restaurante',
