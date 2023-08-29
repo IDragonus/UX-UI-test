@@ -84,3 +84,13 @@ svg {
   overflow: hidden;
   vertical-align: middle;
 }
+
+@media (max-width: 922px) {
+  section.items {
+    grid-column: span 2;
+
+    > div.social {
+      flex-flow: column;
+    }
+  }
+}

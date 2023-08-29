@@ -1,10 +1,12 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { RouterLink } from '@angular/router';
+import { Imgages, NavbarOptions } from 'src/app/interfaces/interfaces';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, RouterLink],
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css'],
 })
@@ -15,12 +17,59 @@ export class HomeComponent {
     '../../../../assets/images/tacos-comida-mexicana.jpg',
   ];
 
+  carouselNav: NavbarOptions[] = [
+    {
+      label: 'restaurante',
+      path: 'restaurante',
+    },
+    {
+      label: 'afterwork',
+      path: 'afterwork',
+    },
+    {
+      label: 'club',
+      path: 'club',
+    },
+    {
+      label: 'eventos',
+      path: 'eventos',
+    },
+  ];
+
+  buttons: NavbarOptions[] = [
+    {
+      label: 'reservar',
+      path: 'reserve',
+    },
+    {
+      label: 'delivery',
+      path: 'delivery',
+    },
+  ];
+
+  imgs: Imgages[] = [
+    { url: '../../../../assets/images/welkhome-club-yourself-left-mhd.jpg' },
+    {
+      url: '../../../../assets/images/welkhome-club-yourself-center-1-mhd.jpg',
+    },
+    {
+      url: '../../../../assets/images/welkhome-club-yourself-center-2-mhd.jpg',
+    },
+    {
+      url: '../../../../assets/images/welkhome-club-yourself-center-3-mhd.jpg',
+    },
+    {
+      url: '../../../../assets/images/welkhome-club-yourself-center-4-mhd.jpg',
+    },
+    { url: '../../../../assets/images/welkhome-club-yourself-right-mhd.jpg' },
+  ];
+
   activeIndex: number = 0;
 
   ngOnInit(): void {
     setInterval(() => {
       this.nextImage();
-    }, 3000);
+    }, 5000);
   }
 
   nextImage() {
