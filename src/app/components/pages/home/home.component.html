@@ -28,15 +28,75 @@
     <h1>WELKHOME!</h1>
     <p>A tu <em>futura</em> casa para comer y beber... de manera única</p>
   </section>
-  <section class="square-photos">
-    <div class="img" *ngFor="let img of imgs">
+  <section class="square-section">
+    <div
+      class="img"
+      *ngFor="let img of imgs; let i = index"
+      [style.display]="shouldDisplayImage(i) ? 'block' : 'none'"
+    >
       <img [src]="img.url" alt="" />
     </div>
-    <!-- <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div> -->
+  </section>
+  <section class="square-section">
+    <div class="multi-col">
+      <h2>Habrás oído de todo desde 2014...</h2>
+    </div>
+    <div class="single-col">
+      <img
+        src="../../../../assets/images/welkhome-club-yourself-left-4-mhd.jpg"
+        alt=""
+      />
+    </div>
+  </section>
+  <section class="square-section">
+    <div class="single-col">
+      <img
+        src="../../../../assets/images/welkhome-club-yourself-left-2-mhd.jpg"
+        alt=""
+      />
+    </div>
+    <div class="multi-col bg-blue">
+      <h2>Sabores increíbles, las bebidas al peso</h2>
+    </div>
+  </section>
+  <section class="square-section">
+    <div class="multi-col">
+      <h2>Sabores increíbles, las bebidas al peso</h2>
+    </div>
+    <div class="single-col">
+      <img
+        src="../../../../assets/images/welkhome-club-yourself-left-3-mhd.jpg"
+        alt=""
+      />
+    </div>
+  </section>
+  <section class="square-section">
+    <div class="single-col">
+      <img
+        src="../../../../assets/images/welkhome-club-yourself-left-6-mhd.jpg"
+        alt=""
+      />
+    </div>
+    <div class="multi-col bg-blue">
+      <h2>Original y rápido</h2>
+    </div>
+  </section>
+  <section class="square-section">
+    <div class="multi-col">
+      <h2>Todo para compartir con tu pareja, amig@s, familia...</h2>
+    </div>
+    <div class="single-col">
+      <img
+        src="../../../../assets/images/welkhome-club-yourself-right-3-mhd.jpg"
+        alt=""
+      />
+    </div>
+  </section>
+  <section class="square-section bg-blue">
+    <div class="full-col">
+      <p>En definitiva:</p>
+      <h2>BLA BLA BLA</h2>
+      <h2>¡Hasta que vengas y lo pruebes!</h2>
+    </div>
   </section>
 </main>

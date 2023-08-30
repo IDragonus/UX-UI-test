@@ -1,7 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
-import { Imgages, NavbarOptions } from 'src/app/interfaces/interfaces';
+import { Images, NavbarOptions } from 'src/app/interfaces/interfaces';
 
 @Component({
   selector: 'app-home',
@@ -47,7 +47,7 @@ export class HomeComponent {
     },
   ];
 
-  imgs: Imgages[] = [
+  imgs: Images[] = [
     { url: '../../../../assets/images/welkhome-club-yourself-left-mhd.jpg' },
     {
       url: '../../../../assets/images/welkhome-club-yourself-center-1-mhd.jpg',
@@ -74,5 +74,9 @@ export class HomeComponent {
 
   nextImage() {
     this.activeIndex = (this.activeIndex + 1) % this.imageUrls.length;
+  }
+
+  shouldDisplayImage(index: number): boolean {
+    return window.innerWidth >= 992 || index < 3 || index > 4;
   }
 }

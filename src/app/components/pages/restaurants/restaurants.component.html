@@ -1,1 +1,71 @@
-<p>restaurants works!</p>
+<main class="carousel-container">
+  <section
+    class="carousel-track"
+    [style.transform]="'translateX(' + -activeIndex * 100 + '%)'"
+  >
+    <div
+      class="carousel-slide"
+      *ngFor="let imageUrl of imageUrls; let i = index"
+      [style.background-image]="'url(' + imageUrl + ')'"
+    ></div>
+  </section>
+  <section class="bg-beige">
+    <div class="box">
+      <h2>EAT DIFFERENT</h2>
+    </div>
+  </section>
+  <section class="bg-white border-white">
+    <div class="box bg-blue">
+      <p>
+        La receta era sencilla. Según nuestras abuelas solo había que comprar
+        los mejores productos de por allá y de por acá. Nuestros chefs añaden
+        las mejores técnicas de alta cocina y os lo presentan rápidamente para
+        compartir. Como en casa... pero mejor. ¿Fácil no?
+      </p>
+    </div>
+  </section>
+  <section class="bg-beige">
+    <div class="box">
+      <h2>#WELFAVORITOS</h2>
+    </div>
+  </section>
+  <section class="col-3">
+    <div class="foods" *ngFor="let food of foods">
+      <img [src]="food" />
+    </div>
+  </section>
+  <section class="bg-beige">
+    <div class="box">
+      <h2>HOME OF CHOOTIS</h2>
+    </div>
+  </section>
+  <section class="col-3">
+    <div class="foods" *ngFor="let meal of meals">
+      <img [src]="meal" />
+    </div>
+  </section>
+  <section class="bg-blue border-white">
+    <div class="box gap p-2">
+      <p>
+        Croquetas 2.0, buñuelos del paraíso... Los han llamado de todo. Y no
+        iban muy desencaminados. Una masa francesa semidulce con el contraste de
+        recetas internacionales saladas...
+      </p>
+      <p>Sobran las palabras.</p>
+    </div>
+  </section>
+  <section class="bg-blue border-white">
+    <div class="footer-buttons p-2">
+      <button *ngFor="let button of buttons">
+        {{ button.label | uppercase }}
+      </button>
+    </div>
+  </section>
+  <section class="bg-beige align-center p-2">
+    <img
+      src="../../../../assets/images/welkhome-club-nosymbol-white-xl.png"
+      alt=""
+    />
+    <p style="font-size: 4rem">Disfruta lo diferente</p>
+  </section>
+</main>

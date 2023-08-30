@@ -3,6 +3,6 @@ export interface NavbarOptions {
   path: string;
 }
 
-export interface Imgages {
+export interface Images {
   url: string;
 }

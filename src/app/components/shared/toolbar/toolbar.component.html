@@ -3,9 +3,12 @@
     class="logo"
     title="WELKHOMEclub | Restaurante, Bar y Espacio de Afterwork y Eventos"
   >
-    <p [routerLink]="'/index'">WELKHOMEclub</p>
+    <img
+      src="../../../../assets/images/welkhome-club-nosymbol-white-xl.png"
+      [routerLink]="'/index'"
+    />
 
-    <mat-icon [ngClass]="" (click)="openMenu = !openMenu">menu</mat-icon>
+    <mat-icon (click)="openMenu = !openMenu">menu</mat-icon>
   </div>
 
   <ul class="option-list-mobile">
