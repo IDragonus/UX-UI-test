@@ -1,1 +1,92 @@
-<p>menu works!</p>
+<main class="container mt-1">
+  <div class="content-center flex-column">
+    <div class="flex-end">
+      Welkhome
+      <img
+        class="logo"
+        src="../../../../assets/images/welkhome-club-logo.png"
+        alt=""
+      />
+      Bienvenidos
+    </div>
+    <div class="divider bg-beige"></div>
+    <button class="btn-blue pt-1">
+      <mat-icon class="restaurant-icon"> restaurant</mat-icon>
+      <p class="bg-white txt-blue radius-bottom-right mb-1 pt pb">
+        MENÚ MEDIO DÍA
+      </p>
+    </button>
+    <h2 class="txt-blue">Pedir a la carta</h2>
+  </div>
+  <div class="divider bg-beige"></div>
+  <div class="container mt-1">
+    <div class="flex-row content-center">
+      <button class="btn-blue pt-1">
+        <mat-icon class="restaurant-icon"> local_bar</mat-icon>
+        <p class="bg-white txt-blue radius-bottom-right mb-1 pt pb">
+          MENÚ MEDIO DÍA
+        </p>
+      </button>
+      <button class="btn-blue pt-1">
+        <mat-icon class="restaurant-icon"> fastfood</mat-icon>
+        <p class="bg-white txt-blue radius-bottom-right mb-1 pt pb">
+          MENÚ MEDIO DÍA
+        </p>
+      </button>
+    </div>
+  </div>
+  <!-- carousel -->
+  <section class="relative p-bettwin bg-beige mt-1">
+    <svg
+      preserveAspectRatio="none"
+      class="svg-top"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 100 100"
+    >
+      <polygon fill="#d7ad65" points="0,0 0,100 50,0"></polygon>
+      <polygon fill="#ddb483" points="100,0 100,100 20,0"></polygon>
+    </svg>
+    <svg
+      preserveAspectRatio="none"
+      class="svg-top-2"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 100 100"
+    >
+      <polygon fill="#d7ad65" points="100,0 100,100 20,0"></polygon>
+    </svg>
+
+    <img
+      src="../../../../assets/images/welkhome-club-bebidas-clasic-rebel-section-l.gif"
+      alt=""
+      style="width: 100%"
+    />
+    <div class="mt-1 gap" style="display: flex; justify-content: center">
+      <p class="p-white">DRINK</p>
+      <p class="p-blue">DIFFERENT</p>
+    </div>
+  </section>
+  <mat-expansion-panel
+    (opened)="panelOpenState = true"
+    (closed)="panelOpenState = false"
+    *ngFor="let option of options"
+  >
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        <b>{{ option.value | uppercase }}</b>
+      </mat-panel-title>
+      <!-- <mat-panel-description>
+        Currently I am {{ panelOpenState ? "open" : "closed" }}
+      </mat-panel-description> -->
+    </mat-expansion-panel-header>
+    <div class="panel-container">
+      <div class="col-span-3 content-center">
+        <p class="p-text-blue">{{ option.viewValue }}</p>
+        <div class="divider bg-beige"></div>
+      </div>
+      <div *ngFor="let url of option.urls">
+        <img [src]="url" alt="" style="width: 100%" />
+        <p class="p-text-blue">Price: $9.99</p>
+      </div>
+    </div>
+  </mat-expansion-panel>
+</main>

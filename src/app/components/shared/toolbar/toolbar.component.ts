@@ -33,10 +33,10 @@ export class ToolbarComponent {
       label: 'restaurante',
       path: 'restaurants',
     },
-    {
-      label: 'bebidas al peso',
-      path: 'drinks',
-    },
+    // {
+    //   label: 'bebidas al peso',
+    //   path: 'drinks',
+    // },
     {
       label: 'carta',
       path: 'menu',
@@ -45,14 +45,14 @@ export class ToolbarComponent {
       label: 'reservar',
       path: 'reserve',
     },
-    {
-      label: 'delivery',
-      path: 'delivery',
-    },
-    {
-      label: 'tu club',
-      path: 'club',
-    },
+    // {
+    //   label: 'delivery',
+    //   path: 'delivery',
+    // },
+    // {
+    //   label: 'tu club',
+    //   path: 'club',
+    // },
     {
       label: 'log out',
       path: '',

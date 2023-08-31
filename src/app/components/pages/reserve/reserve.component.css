@@ -174,3 +174,11 @@ h2.txt-blue {
 img {
   width: 25rem;
 }
+
+@media (max-width: 992px) {
+  .title,
+  .form,
+  .container-4 {
+    width: 90%;
+  }
+}

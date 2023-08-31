@@ -16,7 +16,7 @@
       <a
         [routerLink]="route.path"
         [ngClass]="{
-          bordered: route.label === 'delivery' || route.label === 'reservar'
+          bordered: route.label === 'carta' || route.label === 'reservar'
         }"
         >{{ route.label | uppercase }}</a
       >
@@ -28,7 +28,7 @@
       [routerLink]="route.path"
       *ngFor="let route of navigateOptions"
       [ngClass]="{
-        bordered: route.label === 'delivery' || route.label === 'reservar'
+        bordered: route.label === 'carta' || route.label === 'reservar'
       }"
     >
       {{ route.label | uppercase }}

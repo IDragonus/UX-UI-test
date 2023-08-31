@@ -11,3 +11,7 @@ export interface Options {
   value: string;
   viewValue: string;
 }
+
+export interface OptionExtends extends Options {
+  urls: string[];
+}
