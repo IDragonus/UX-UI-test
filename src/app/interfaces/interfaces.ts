@@ -6,3 +6,8 @@ export interface NavbarOptions {
 export interface Images {
   url: string;
 }
+
+export interface Options {
+  value: string;
+  viewValue: string;
+}

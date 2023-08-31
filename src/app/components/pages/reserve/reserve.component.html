@@ -1,1 +1,173 @@
-<p>reserve works!</p>
+<main class="container">
+  <section class="col-span-4 bg-beige box-heigh">
+    <h2>RESERVAS</h2>
+  </section>
+  <section class="title-header col-span-4 bg-white">
+    <svg
+      preserveAspectRatio="none"
+      class="svg-top"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 100 100"
+    >
+      <polygon fill="#d7ad65" points="0,0 0,100 50,0"></polygon>
+      <polygon fill="#ddb483" points="100,0 100,100 20,0"></polygon>
+    </svg>
+    <svg
+      preserveAspectRatio="none"
+      class="svg-top-2"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 100 100"
+    >
+      <polygon fill="#d7ad65" points="100,0 100,100 20,0"></polygon>
+    </svg>
+  </section>
+  <section class="col-span-4 mb-5">
+    <div class="title">
+      <h2 class="txt-blue">1. Tu DÍA, HORA e INVITADOS</h2>
+      <div class="line bg-beige"></div>
+    </div>
+    <section class="form">
+      <mat-form-field class="col-span-4" appearance="outline">
+        <mat-label>Tu día especial</mat-label>
+        <input matInput [matDatepicker]="picker" />
+        <mat-hint>MM/DD/YYYY</mat-hint>
+        <mat-datepicker-toggle
+          matIconSuffix
+          [for]="picker"
+        ></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Hora:</mat-label>
+        <mat-select>
+          <mat-option *ngFor="let option of options" [value]="option.value">
+            {{ option.value }} - {{ option.viewValue }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field class="col-span-3" appearance="outline">
+        <mat-label>¿Cuánt@s?</mat-label>
+        <input type="number" matInput />
+      </mat-form-field>
+      <button class="col-span-4" mat-raised-button color="primary">
+        A reservar y salivar
+      </button>
+    </section>
+  </section>
+  <section class="col-span-4 bg-beige">
+    <h2 class="p5">PROMOS</h2>
+  </section>
+  <section class="col-span-4">
+    <div class="container-4">
+      <div class="col-span-4 text-center mt-5">
+        <p class="txt-blue">SOLO AQUÍ -20% en BEBIDAS AL PESO.</p>
+        <p class="txt-blue">Y -50/-30/-20% en COMIDA.</p>
+      </div>
+      <div class="radius-top-left-beige mt-1">COMIDA</div>
+      <div class="radius-top-left-blue mt-1">LUN-VIE</div>
+      <div class="radius-top-left-blue mt-1">SAB</div>
+      <div class="radius-top-left-blue mt-1">DOM</div>
+      <div class="radius-top-left-blue mt-1">13:00h</div>
+      <div class="radius-top-left-bottom-right mt-1">
+        -50%<mat-icon> restaurant</mat-icon> -20%<mat-icon> local_bar</mat-icon>
+      </div>
+      <div class="radius-top-left-bottom-right mt-1 col-span-2">
+        -20%<mat-icon> restaurant</mat-icon> -20%<mat-icon> local_bar</mat-icon>
+      </div>
+      <div class="radius-top-left-blue mt-1">13:30h</div>
+      <div class="radius-top-left-bottom-right mt-1">
+        -30%<mat-icon> restaurant</mat-icon> -20%<mat-icon> local_bar</mat-icon>
+      </div>
+      <div class="radius-top-left-bottom-right mt-1 col-span-2">
+        -30%<mat-icon> restaurant</mat-icon> -20%<mat-icon> local_bar</mat-icon>
+      </div>
+      <div class="radius-top-left-blue mt-1 gap-1">
+        <p>14:00h</p>
+        <p>15:00h</p>
+      </div>
+      <div class="mt-1 vertical-align-center">
+        <div class="radius-top-left-bottom-right full-width">
+          -30%<mat-icon> restaurant</mat-icon> -20%<mat-icon>
+            local_bar</mat-icon
+          >
+        </div>
+      </div>
+      <div class="mt-1 vertical-align-center">
+        <div class="radius-top-left-bottom-right full-width">
+          -10%<mat-icon> restaurant</mat-icon> -20%<mat-icon>
+            local_bar</mat-icon
+          >
+        </div>
+      </div>
+      <div class="mt-1 vertical-align-center">
+        <div class="radius-top-left-bottom-right full-width">
+          -20%<mat-icon> restaurant</mat-icon> -20%<mat-icon>
+            local_bar</mat-icon
+          >
+        </div>
+      </div>
+      <div class="radius-top-left-blue mt-1">15:30h</div>
+      <div class="radius-top-left-bottom-right mt-1">
+        -30%<mat-icon> restaurant</mat-icon> -20%<mat-icon> local_bar</mat-icon>
+      </div>
+      <div class="radius-top-left-bottom-right mt-1 col-span-2">
+        -20%<mat-icon> restaurant</mat-icon> -20%<mat-icon> local_bar</mat-icon>
+      </div>
+      <div class="radius-top-left-blue mt-1">16:00h</div>
+      <div class="radius-top-left-bottom-right mt-1">
+        -50%<mat-icon> restaurant</mat-icon> -20%<mat-icon> local_bar</mat-icon>
+      </div>
+      <div class="radius-top-left-bottom-right mt-1 col-span-2">
+        -30%<mat-icon> restaurant</mat-icon> -20%<mat-icon> local_bar</mat-icon>
+      </div>
+      <div class="col-span-4 mb-5"></div>
+      <div class="radius-top-left-beige bg-beige">CENA</div>
+      <div class="radius-top-left-blue col-span-2">DOM-JUE</div>
+      <div class="radius-top-left-blue">VIE-SAB</div>
+      <div class="radius-top-left-blue mt-1">20:00h</div>
+      <div class="radius-top-left-bottom-right mt-1 col-span-2">
+        -50%<mat-icon> restaurant</mat-icon> -20%<mat-icon> local_bar</mat-icon>
+      </div>
+      <div class="radius-top-left-bottom-right mt-1">
+        -30%<mat-icon> restaurant</mat-icon> -20%<mat-icon> local_bar</mat-icon>
+      </div>
+      <div class="radius-top-left-blue mt-1">20:30h</div>
+      <div class="radius-top-left-bottom-right mt-1 col-span-3">
+        -20%<mat-icon> restaurant</mat-icon> -20%<mat-icon> local_bar</mat-icon>
+      </div>
+      <div class="radius-top-left-blue mt-1 gap-1">
+        <p>21:00h</p>
+        <p>22:00h</p>
+      </div>
+      <div class="mt-1 vertical-align-center col-span-2">
+        <div class="radius-top-left-bottom-right full-width">
+          -20%<mat-icon> restaurant</mat-icon> -20%<mat-icon>
+            local_bar</mat-icon
+          >
+        </div>
+      </div>
+      <div class="mt-1 vertical-align-center">
+        <div class="radius-top-left-bottom-right full-width">
+          -10%<mat-icon> restaurant</mat-icon> -20%<mat-icon>
+            local_bar</mat-icon
+          >
+        </div>
+      </div>
+      <div class="radius-top-left-blue mt-1">22:30h</div>
+      <div class="radius-top-left-bottom-right mt-1 col-span-2">
+        -50%<mat-icon> restaurant</mat-icon> -20%<mat-icon> local_bar</mat-icon>
+      </div>
+      <div class="radius-top-left-bottom-right mt-1">
+        -20%<mat-icon> restaurant</mat-icon> -20%<mat-icon> local_bar</mat-icon>
+      </div>
+      <div class="mb-5"></div>
+    </div>
+  </section>
+  <section class="col-span-4 bg-beige box-heigh vertical-align-center">
+    <img
+      src="../../../../assets/images/welkhome-club-nosymbol-white-xl.png"
+      alt=""
+    />
+    <h2 class="txt-blue">Disfruta lo diferente</h2>
+  </section>
+</main>
